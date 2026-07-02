@@ -4,224 +4,65 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ByPablo | Premium Dog Accessories</title>
-<meta name="description" content="ByPablo is a Sydney based premium dog accessory brand creating stylish travel, enrichment and everyday dog products.">
 <style>
-:root{
---cream:#E2D5BA;--white:#fff;--soft:#FAF8F5;--beige:#F5F1EA;--text:#2D2D2D;--muted:#666;--border:#ECE7DF;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:Montserrat,Arial,sans-serif;color:var(--text);background:var(--white);line-height:1.6}
-header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
-nav{max-width:1200px;margin:auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
-.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:24px}
-.logo img{width:52px;height:52px;border-radius:50%;object-fit:cover}
-.logo span{color:var(--cream)}
-.links a{text-decoration:none;color:var(--text);margin-left:24px;font-weight:600}
+:root{--cream:#E2D5BA;--white:#fff;--soft:#FAF8F5;--text:#2D2D2D;--muted:#666;--border:#ECE7DF}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;color:var(--text);background:#fff;line-height:1.6}
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.95);border-bottom:1px solid var(--border)}
+nav{max-width:1200px;margin:auto;padding:14px 24px;display:flex;justify-content:space-between;align-items:center}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:24px}.logo img{width:52px;height:52px;border-radius:50%;object-fit:cover}.logo span{color:var(--cream)}
+.links a,.cart-btn{text-decoration:none;color:var(--text);margin-left:18px;font-weight:600;background:none;border:0;cursor:pointer;font:inherit}.cart-btn{background:var(--cream);padding:9px 14px;border-radius:999px}
 .hero{min-height:86vh;background:linear-gradient(90deg,rgba(0,0,0,.56),rgba(0,0,0,.18)),url("7238B7B3-31DA-42A4-AE5E-145F49ED4EA6(2).jpeg") center/cover;display:flex;align-items:center;color:white}
-.hero-inner{max-width:1200px;margin:auto;padding:80px 24px;width:100%}
-.hero h1{font-size:clamp(42px,7vw,82px);line-height:1.02;max-width:780px;margin-bottom:20px}
-.hero p{font-size:20px;max-width:620px;margin-bottom:30px}
-.btn{display:inline-block;border:0;border-radius:999px;background:var(--cream);color:#222;padding:14px 28px;text-decoration:none;font-weight:800;cursor:pointer;transition:.25s}
-.btn:hover{transform:translateY(-2px);filter:brightness(.97)}
-section{padding:82px 24px}
-.container{max-width:1200px;margin:auto}
-h2{font-size:clamp(32px,4vw,54px);line-height:1.08;text-align:center;margin-bottom:18px}
-.sub{text-align:center;color:var(--muted);max-width:760px;margin:0 auto 38px;font-size:18px}
-.soft{background:var(--soft)}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:26px}
-.card{background:#fff;border:1px solid var(--border);border-radius:24px;overflow:hidden;box-shadow:0 18px 46px rgba(0,0,0,.07);transition:.25s}
-.card:hover{transform:translateY(-7px)}
-.card img{width:100%;height:260px;object-fit:cover;display:block}
-.card-body{padding:22px}
-.price{font-weight:900;font-size:20px;margin:8px 0}
-.stock,.meta{color:var(--muted);font-size:14px;margin-bottom:12px}
-.features{padding-left:18px;color:var(--muted);font-size:14px;margin:14px 0}
-.filters{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-bottom:28px}
-.filter-pill{background:#fff;border:1px solid var(--border);padding:10px 16px;border-radius:999px;color:var(--muted)}
-.about-wrap{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
-.about-wrap img{width:100%;border-radius:28px;box-shadow:0 18px 46px rgba(0,0,0,.08)}
-.about-card{background:#fff;border:1px solid var(--border);border-radius:28px;padding:34px;box-shadow:0 18px 46px rgba(0,0,0,.06)}
-.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
-.gallery img{width:100%;height:260px;object-fit:cover;border-radius:22px}
-.review{background:#fff;border:1px solid var(--border);border-radius:22px;padding:26px}
-form{max-width:720px;margin:30px auto 0;display:grid;gap:14px}
-input,textarea,select{border:1px solid var(--border);border-radius:14px;padding:15px;font:inherit}
-textarea{min-height:140px}
-footer{background:#252525;color:white;text-align:center;padding:48px 24px}
-footer a{color:var(--cream);text-decoration:none}
-.notice{font-size:13px;color:var(--muted);margin-top:10px}
-@media(max-width:760px){
-nav{flex-direction:column;gap:12px}.links a{margin:0 8px}.hero{text-align:center}.hero p{margin-left:auto;margin-right:auto}.about-wrap{grid-template-columns:1fr}section{padding:60px 18px}
-}
+.hero-inner{max-width:1200px;margin:auto;padding:80px 24px;width:100%}.hero h1{font-size:clamp(42px,7vw,82px);line-height:1.02;max-width:780px;margin-bottom:20px}.hero p{font-size:20px;max-width:620px;margin-bottom:30px}
+.btn{display:inline-block;border:0;border-radius:999px;background:var(--cream);color:#222;padding:14px 28px;text-decoration:none;font-weight:800;cursor:pointer}
+section{padding:78px 24px}.container{max-width:1200px;margin:auto}h2{font-size:clamp(32px,4vw,54px);text-align:center;margin-bottom:18px}.sub{text-align:center;color:var(--muted);max-width:760px;margin:0 auto 38px;font-size:18px}.soft{background:var(--soft)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:26px}.card{background:#fff;border:1px solid var(--border);border-radius:24px;overflow:hidden;box-shadow:0 18px 46px rgba(0,0,0,.07)}.card img{width:100%;height:260px;object-fit:cover}.card-body{padding:22px}.price{font-weight:900;font-size:20px;margin:8px 0}.stock{color:var(--muted);font-size:14px;margin-bottom:12px}.features{padding-left:18px;color:var(--muted);font-size:14px;margin:14px 0}
+.about-wrap{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}.about-wrap img{width:100%;border-radius:28px}.about-card,.review{background:#fff;border:1px solid var(--border);border-radius:24px;padding:28px}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}.gallery img{width:100%;height:260px;object-fit:cover;border-radius:22px}
+form{max-width:720px;margin:30px auto 0;display:grid;gap:14px}input,textarea,select{border:1px solid var(--border);border-radius:14px;padding:15px;font:inherit}textarea{min-height:140px}
+footer{background:#252525;color:white;text-align:center;padding:48px 24px}footer a{color:var(--cream);text-decoration:none}.notice{font-size:13px;color:var(--muted);margin-top:10px}
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.35);z-index:40;display:none}.overlay.show{display:block}.cart-drawer{position:fixed;top:0;right:-430px;width:min(430px,92vw);height:100%;background:#fff;z-index:50;box-shadow:-20px 0 50px rgba(0,0,0,.18);transition:.3s;padding:24px;display:flex;flex-direction:column}.cart-drawer.open{right:0}.cart-head{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--border);padding-bottom:15px}.close-cart{font-size:28px;background:none;border:0;cursor:pointer}.cart-items{flex:1;overflow:auto;padding:18px 0}.cart-item{display:grid;grid-template-columns:1fr auto;gap:8px;border-bottom:1px solid var(--border);padding:14px 0}.cart-item small{color:var(--muted)}.qty{display:flex;gap:8px;align-items:center}.qty button{border:1px solid var(--border);background:var(--soft);border-radius:50%;width:28px;height:28px;cursor:pointer}.cart-total{border-top:1px solid var(--border);padding-top:16px}.checkout{width:100%;margin-top:14px}
+@media(max-width:760px){nav{flex-direction:column;gap:12px}.links a,.cart-btn{margin:0 7px}.about-wrap{grid-template-columns:1fr}section{padding:60px 18px}.hero{text-align:center}.hero p{margin:auto auto 30px}}
 </style>
 </head>
 <body>
+<header><nav><div class="logo"><img src="IMG_7399(1).png" alt="ByPablo logo">by<span>Pablo</span></div><div class="links"><a href="#home">Home</a><a href="#shop">Shop</a><a href="#about">About</a><a href="#contact">Contact</a><button class="cart-btn" onclick="openCart()">Cart (<span id="cartCount">0</span>)</button></div></nav></header>
 
-<header>
-<nav>
-<div class="logo"><img src="IMG_7399(1).png" alt="ByPablo logo"> by<span>Pablo</span></div>
-<div class="links">
-<a href="#home">Home</a><a href="#shop">Shop</a><a href="#about">About</a><a href="#contact">Contact</a>
-</div>
-</nav>
-</header>
+<section class="hero" id="home"><div class="hero-inner"><h1>Premium Dog Accessories for Everyday Adventures</h1><p>Stylish, practical and carefully selected dog products designed for travel, enrichment, play and everyday life.</p><a class="btn" href="#shop">Shop Now</a></div></section>
 
-<section class="hero" id="home">
-<div class="hero-inner">
-<h1>Premium Dog Accessories for Everyday Adventures</h1>
-<p>Stylish, practical and carefully selected dog products designed for travel, enrichment, play and everyday life.</p>
-<a class="btn" href="#shop">Shop Now</a>
-</div>
-</section>
+<section class="soft"><div class="container"><h2>Designed for Dogs, Loved by Owners</h2><p class="sub">ByPablo is a Sydney, Australia based dog accessory brand inspired by Pablo the Miniature Dachshund.</p><div class="gallery"><img src="IMG_3270(1).jpeg"><img src="IMG_3277(1).jpeg"><img src="IMG_3547(1).jpeg"><img src="IMG_0060(2).PNG"></div></div></section>
 
-<section class="soft">
-<div class="container">
-<h2>Designed for Dogs, Loved by Owners</h2>
-<p class="sub">ByPablo is a Sydney, Australia based dog accessory brand with a clean, premium and minimal feel, inspired by Pablo the Miniature Dachshund.</p>
-<div class="gallery">
-<img src="IMG_3270(1).jpeg" alt="ByPablo travel water bowl">
-<img src="IMG_3277(1).jpeg" alt="ByPablo tennis balls">
-<img src="IMG_3547(1).jpeg" alt="ByPablo rope toy">
-<img src="IMG_0060(2).PNG" alt="ByPablo lick mats">
-</div>
-</div>
-</section>
+<section id="shop"><div class="container"><h2>Shop ByPablo</h2><p class="sub">Add products to the cart. Checkout will connect to Shopify once the Shopify store is set up.</p><div class="grid">
+<div class="card"><img src="IMG_3270(1).jpeg"><div class="card-body"><h3>Dog Travel Water Bowl</h3><p class="price">$19.95</p><p class="stock">Stock: 100 | 1000ml</p><p>Collapsible, lightweight and easy to carry for walks, hikes, road trips and holidays.</p><ul class="features"><li>Lightweight and portable</li><li>Collapsible design</li><li>Easy to clean</li><li>Perfect for travel</li></ul><button class="btn" onclick="addToCart('Dog Travel Water Bowl',19.95)">Add to Cart</button></div></div>
+<div class="card"><img src="IMG_0060(2).PNG"><div class="card-body"><h3>Dog Lick Mat</h3><p class="price">$19.95</p><p class="stock">Stock: 60 | Stone, Blush, Coast</p><p>Helps reduce boredom and anxiety while encouraging slower eating.</p><ul class="features"><li>Promotes calm behaviour</li><li>Slows eating</li><li>Great for enrichment</li><li>Non-slip design</li></ul><button class="btn" onclick="addToCart('Dog Lick Mat',19.95)">Add to Cart</button></div></div>
+<div class="card"><img src="IMG_3547(1).jpeg"><div class="card-body"><h3>Rope Toy</h3><p class="price">Small $7.95 | Large $9.95</p><select id="ropeSize"><option value="Small Rope Toy|7.95">Small - $7.95</option><option value="Large Rope Toy|9.95">Large - $9.95</option></select><ul class="features"><li>Durable rope</li><li>Great for tug</li><li>Helps clean teeth</li></ul><button class="btn" onclick="addSelected('ropeSize')">Add to Cart</button></div></div>
+<div class="card"><img src="IMG_3277(1).jpeg"><div class="card-body"><h3>Tennis Ball</h3><p class="price">Small $5.95 | Large $7.95</p><select id="ballSize"><option value="Small Tennis Ball|5.95">Small - $5.95</option><option value="Large Tennis Ball|7.95">Large - $7.95</option></select><ul class="features"><li>Lightweight</li><li>Durable</li><li>Perfect for fetch</li></ul><button class="btn" onclick="addSelected('ballSize')">Add to Cart</button></div></div>
+<div class="card"><img src="IMG_0150(1).jpeg"><div class="card-body"><h3>Dog Bandana</h3><p class="price">$14.95</p><select id="bandanaSize"><option value="Small Dog Bandana|14.95">Small</option><option value="Medium Dog Bandana|14.95">Medium</option><option value="Large Dog Bandana|14.95">Large</option></select><ul class="features"><li>Comfortable fabric</li><li>Lightweight</li><li>Adjustable fit</li></ul><button class="btn" onclick="addSelected('bandanaSize')">Add to Cart</button></div></div>
+</div></div></section>
 
-<section id="shop">
-<div class="container">
-<h2>Shop ByPablo</h2>
-<p class="sub">Browse all products. Online ordering is coming soon — use the contact form to enquire.</p>
-<div class="filters">
-<span class="filter-pill">Filter: Travel</span><span class="filter-pill">Filter: Enrichment</span><span class="filter-pill">Filter: Toys</span><span class="filter-pill">Filter: Accessories</span><span class="filter-pill">Size</span><span class="filter-pill">Colour</span>
-</div>
-<div class="grid">
+<section class="soft" id="about"><div class="container about-wrap"><img src="IMG_3561(1).jpeg"><div class="about-card"><h2 style="text-align:left">Inspired by One Little Dachshund</h2><p><strong>Hi, I’m Bailee, the founder of ByPablo.</strong></p><br><p>The brand is named after our much-loved Miniature Dachshund Pablo, who inspired ByPablo from the very beginning.</p><br><p>Every product is carefully selected with comfort, quality and functionality in mind.</p></div></div></section>
 
-<div class="card">
-<img src="IMG_3270(1).jpeg" alt="Dog Travel Water Bowl">
-<div class="card-body">
-<h3>Dog Travel Water Bowl</h3><p class="price">$19.95</p><p class="stock">Stock: 100 | 1000ml capacity</p>
-<p>Keep your dog hydrated wherever your adventures take you. Lightweight, durable, collapsible and folds flat.</p>
-<ul class="features"><li>Lightweight and portable</li><li>Collapsible design</li><li>Easy to clean</li><li>Perfect for travel</li><li>Suitable for all breeds</li></ul>
-<button class="btn" onclick="comingSoon()">Add to Cart</button>
-</div></div>
+<section><div class="container"><h2>Customer Reviews</h2><div class="grid"><div class="review"><p>★★★★★</p><p>“Beautiful quality and perfect for everyday adventures.”</p><strong>Sarah & Milo</strong></div><div class="review"><p>★★★★★</p><p>“The travel bowl is so handy and premium.”</p><strong>Jess & Archie</strong></div><div class="review"><p>★★★★★</p><p>“Stylish and practical.”</p><strong>Emily & Pablo</strong></div></div></div></section>
 
-<div class="card">
-<img src="IMG_0060(2).PNG" alt="Dog Lick Mat">
-<div class="card-body">
-<h3>Dog Lick Mat</h3><p class="price">$19.95</p><p class="stock">Stock: 60 | Stone, Blush, Coast</p>
-<p>Turn treat time into enrichment time. Helps reduce boredom and anxiety while encouraging slower eating.</p>
-<ul class="features"><li>Promotes calm behaviour</li><li>Slows down eating</li><li>Great for enrichment</li><li>Easy to clean</li><li>Non-slip design</li></ul>
-<button class="btn" onclick="comingSoon()">Add to Cart</button>
-</div></div>
+<section class="soft"><div class="container"><h2>Instagram Feed</h2><p class="sub">Future Instagram feed for product photos, Pablo updates and customer adventures.</p><div class="gallery"><img src="IMG_0151(3).jpeg"><img src="IMG_3270(1).jpeg"><img src="IMG_3277(1).jpeg"><img src="IMG_3561(1).jpeg"></div></div></section>
 
-<div class="card">
-<img src="IMG_3547(1).jpeg" alt="Rope Toy">
-<div class="card-body">
-<h3>Rope Toy</h3><p class="price">Small $7.95 | Large $9.95</p><p class="stock">Stock: 70 of each size</p>
-<p>Built for endless games of tug, fetch and chewing while supporting healthy teeth and gums.</p>
-<ul class="features"><li>Durable rope construction</li><li>Great for fetch and tug</li><li>Helps clean teeth</li><li>Everyday play</li><li>Small and Large</li></ul>
-<button class="btn" onclick="comingSoon()">Add to Cart</button>
-</div></div>
+<section id="contact"><div class="container"><h2>Contact ByPablo</h2><p class="sub">Sydney, Australia | bypabloco1@gmail.com | 0479 009 579</p><form action="mailto:bypabloco1@gmail.com" method="post" enctype="text/plain"><input name="First Name" placeholder="First Name" required><input name="Last Name" placeholder="Last Name"><input type="email" name="Email" placeholder="Email" required><input name="Phone" placeholder="Phone"><input name="Subject" placeholder="Subject"><textarea name="Message" placeholder="Message" required></textarea><button class="btn" type="submit">Send Enquiry</button></form></div></section>
 
-<div class="card">
-<img src="IMG_3277(1).jpeg" alt="Tennis Ball">
-<div class="card-body">
-<h3>Tennis Ball</h3><p class="price">Small $5.95 | Large $7.95</p><p class="stock">Large stock: 150 | Sand, Stone, Cocoa, Blush, Coast</p>
-<p>A classic favourite for active dogs. Perfect for games of fetch at the park, beach or backyard.</p>
-<ul class="features"><li>Lightweight</li><li>Durable</li><li>Perfect for fetch</li><li>Bright and easy to spot</li><li>Everyday play</li></ul>
-<button class="btn" onclick="comingSoon()">Add to Cart</button>
-</div></div>
+<footer><h3>by<span style="color:#E2D5BA">Pablo</span></h3><p>Premium Dog Accessories for Everyday Adventures</p><p>Sydney, Australia</p><p><a href="mailto:bypabloco1@gmail.com">bypabloco1@gmail.com</a> | 0479 009 579</p><br><p>© 2026 ByPablo. All Rights Reserved.</p></footer>
 
-<div class="card">
-<img src="IMG_0150(1).jpeg" alt="Dog Bandana">
-<div class="card-body">
-<h3>Dog Bandana</h3><p class="price">$14.95</p><p class="stock">Sizes: Small, Medium, Large | Colour: Beige</p>
-<p>Complete your dog's look with a stylish bandana made for comfort, adventures, birthdays and photos.</p>
-<ul class="features"><li>Comfortable fabric</li><li>Lightweight</li><li>Adjustable fit</li><li>Small, Medium and Large</li></ul>
-<button class="btn" onclick="comingSoon()">Add to Cart</button>
-</div></div>
-
-</div></div>
-</section>
-
-<section class="soft" id="about">
-<div class="container about-wrap">
-<img src="IMG_3561(1).jpeg" alt="Pablo with ByPablo travel bowl">
-<div class="about-card">
-<h2 style="text-align:left">Inspired by One Little Dachshund</h2>
-<p><strong>Hi, I’m Bailee, the founder of ByPablo.</strong></p><br>
-<p>The brand is named after our much-loved Miniature Dachshund Pablo, who has been the inspiration behind ByPablo from the very beginning. His playful personality, love for adventure and everyday antics inspired me to create a collection of high quality, practical dog products that are designed for everyday life while still looking great.</p><br>
-<p>At ByPablo, we believe every adventure is better with your best friend by your side. Every product is carefully selected with comfort, quality and functionality in mind.</p>
-</div>
-</div>
-</section>
-
-<section>
-<div class="container">
-<h2>Customer Reviews</h2>
-<p class="sub">Space for future customer reviews.</p>
-<div class="grid">
-<div class="review"><p>★★★★★</p><p>“Beautiful quality and perfect for everyday adventures.”</p><strong>Sarah & Milo</strong></div>
-<div class="review"><p>★★★★★</p><p>“The travel bowl is so handy and looks so premium.”</p><strong>Jess & Archie</strong></div>
-<div class="review"><p>★★★★★</p><p>“Stylish, practical and exactly what my dog needed.”</p><strong>Emily & Pablo</strong></div>
-</div>
-</div>
-</section>
-
-<section class="soft">
-<div class="container">
-<h2>Instagram Feed</h2>
-<p class="sub">Future Instagram feed for product photos, Pablo updates and customer adventures.</p>
-<div class="gallery">
-<img src="IMG_0151(3).jpeg" alt="ByPablo bandana product image">
-<img src="IMG_3270(1).jpeg" alt="ByPablo product image">
-<img src="IMG_3277(1).jpeg" alt="ByPablo tennis ball product image">
-<img src="IMG_3561(1).jpeg" alt="Pablo with travel bowl">
-</div>
-</div>
-</section>
-
-<section id="contact">
-<div class="container">
-<h2>Contact ByPablo</h2>
-<p class="sub">Sydney, Australia | bypabloco1@gmail.com | 0479 009 579</p>
-<form action="mailto:bypabloco1@gmail.com" method="post" enctype="text/plain">
-<input name="First Name" placeholder="First Name" required>
-<input name="Last Name" placeholder="Last Name">
-<input type="email" name="Email" placeholder="Email" required>
-<input name="Phone" placeholder="Phone">
-<input name="Subject" placeholder="Subject">
-<textarea name="Message" placeholder="Message" required></textarea>
-<button class="btn" type="submit">Send Enquiry</button>
-</form>
-</div>
-</section>
-
-<section class="soft">
-<div class="container">
-<h2>Join the ByPablo Family</h2>
-<p class="sub">Be the first to hear about new arrivals, exclusive offers and adventure inspiration.</p>
-<form onsubmit="subscribe(event)">
-<input type="email" placeholder="Enter your email" required>
-<button class="btn">Subscribe</button>
-<p class="notice" id="subscribeMsg"></p>
-</form>
-</div>
-</section>
-
-<footer>
-<h3>by<span style="color:#E2D5BA">Pablo</span></h3>
-<p>Premium Dog Accessories for Everyday Adventures</p>
-<p>Sydney, Australia</p>
-<p><a href="mailto:bypabloco1@gmail.com">bypabloco1@gmail.com</a> | 0479 009 579</p>
-<br><p>© 2026 ByPablo. All Rights Reserved.</p>
-</footer>
+<div class="overlay" id="overlay" onclick="closeCart()"></div><aside class="cart-drawer" id="cartDrawer"><div class="cart-head"><h2 style="font-size:28px;text-align:left;margin:0">Your Cart</h2><button class="close-cart" onclick="closeCart()">×</button></div><div class="cart-items" id="cartItems"></div><div class="cart-total"><p><strong>Total: $<span id="cartTotal">0.00</span></strong></p><button class="btn checkout" onclick="checkout()">Checkout with Shopify</button><p class="notice">This will connect to Shopify once the Shopify store/products are set up.</p></div></aside>
 
 <script>
-function comingSoon(){alert("Online ordering is coming soon. Please contact ByPablo to enquire about purchasing.");location.href="#contact"}
-function subscribe(e){e.preventDefault();document.getElementById("subscribeMsg").textContent="Thanks for subscribing!"}
+let cart=JSON.parse(localStorage.getItem("bypabloCart")||"[]");
+function saveCart(){localStorage.setItem("bypabloCart",JSON.stringify(cart));renderCart()}
+function addToCart(name,price){let item=cart.find(i=>i.name===name);if(item){item.qty++}else{cart.push({name,price,qty:1})}saveCart();openCart()}
+function addSelected(id){let parts=document.getElementById(id).value.split("|");addToCart(parts[0],parseFloat(parts[1]))}
+function changeQty(name,amount){let item=cart.find(i=>i.name===name);if(!item)return;item.qty+=amount;if(item.qty<=0){cart=cart.filter(i=>i.name!==name)}saveCart()}
+function renderCart(){let box=document.getElementById("cartItems"),count=0,total=0;box.innerHTML="";cart.forEach(i=>{count+=i.qty;total+=i.price*i.qty;box.innerHTML+=`<div class="cart-item"><div><strong>${i.name}</strong><br><small>$${i.price.toFixed(2)} each</small></div><div class="qty"><button onclick="changeQty('${i.name}',-1)">-</button><span>${i.qty}</span><button onclick="changeQty('${i.name}',1)">+</button></div></div>`});if(cart.length===0)box.innerHTML="<p>Your cart is empty.</p>";document.getElementById("cartCount").textContent=count;document.getElementById("cartTotal").textContent=total.toFixed(2)}
+function openCart(){document.getElementById("cartDrawer").classList.add("open");document.getElementById("overlay").classList.add("show")}
+function closeCart(){document.getElementById("cartDrawer").classList.remove("open");document.getElementById("overlay").classList.remove("show")}
+function checkout(){if(cart.length===0){alert("Your cart is empty.");return}alert("This checkout button is ready to connect to Shopify. Replace the placeholder link in the code with the real Shopify link once Shopify is set up.");window.location.href="https://bypablo.myshopify.com"}
+renderCart();
 </script>
-
 </body>
 </html>
